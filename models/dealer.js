@@ -4,7 +4,7 @@ const dealerSchema = new mongoose.Schema({
     location: String,
     NumCars: Number,
     brands: Array,
-    rating: String,
+    rating: String
 });
 
 const Dealer = mongoose.model("Dealer", dealerSchema);
