@@ -5,7 +5,7 @@ const dealerSchema = mongoose.Schema({
     NumCars: Number,
     brands: Array,
     rating: String,
-})
+});
 
 const Dealer = mongoose.model("Dealer", dealerSchema);
 module.exports = Dealer;
