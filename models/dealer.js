@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const dealerSchema = mongoose.Schema({
+const dealerSchema = new mongoose.Schema({
     location: String,
     NumCars: Number,
     brands: Array,
