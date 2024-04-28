@@ -14,6 +14,7 @@ const Part = require('./models/parts.js');
 // Importing the controllers
 const carController = require("./controllers/carController.js");
 const dealerController = require('./controllers/dealerController.js');
+const partController = require('./controllers/partController.js');
 
 app.use(express.json());
 app.use(cors());
@@ -35,6 +36,13 @@ app.get("/api/dealers/:id", dealerController.fetchDealer);
 app.post("/api/dealers", dealerController.create);
 app.put('/api/dealers/:id', dealerController.update);
 app.delete('/api/dealers/:id', dealerController.deleteDealer);
+
+// Part Routes
+app.get("/api/parts", partController.fetchAll);
+app.get("/api/parts/:id", partController.fetchPart);
+app.post("/api/parts/", partController.create);
+app.put("/api/parts/:id", partController.update);
+app.delete("/api/parts/:id", partController.deletePart);
 
 
 app.listen(PORT, () => {

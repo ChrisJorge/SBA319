@@ -4,7 +4,7 @@ const partSchema = new mongoose.Schema({
     name: String,
     quantity: Number,
     price: Number,
-    expressShipping: Boolean
+    expressShipping: String
 });
 
 const Part = mongoose.model("Part", partSchema);
